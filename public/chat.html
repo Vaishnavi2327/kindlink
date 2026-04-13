@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Chat • kindlink</title>
+    <link rel="stylesheet" href="/assets/app.css?v=2" />
+  </head>
+  <body data-page="chat">
+    <header class="topbar">
+      <div class="container">
+        <a class="brand" href="/index.html"><span class="logo"></span> kindlink</a>
+        <nav class="nav" data-nav></nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="grid">
+        <div class="card col-12">
+          <div class="card-body">
+            <div class="row" style="align-items:end">
+              <div>
+                <div class="pill">Chat system</div>
+                <h1 id="chatTitle" style="margin-top:10px">Chat</h1>
+                <p>Messages are stored in MongoDB and fetched by polling.</p>
+              </div>
+              <div class="actions" style="justify-content:flex-end">
+                <a class="btn" href="/my-tasks.html">My tasks</a>
+                <a class="btn" href="/history.html">History</a>
+              </div>
+            </div>
+          </div>
+          <div id="chatBox" class="chat" aria-live="polite"></div>
+          <div class="card-body">
+            <form id="chatForm" class="row" style="align-items:end">
+              <div style="grid-column: span 2">
+                <label for="message">Message</label>
+                <input id="message" placeholder="Type a message…" autocomplete="off" />
+              </div>
+              <div class="actions" style="justify-content:flex-end">
+                <button class="btn primary" type="submit">Send</button>
+              </div>
+            </form>
+            <p class="muted" style="margin-top:10px"><b>Tip:</b> Messages are shared between the requester and all volunteers. Be respectful and helpful. Chat history is saved for reference.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <footer class="footer">kindlink • built for community trust</footer>
+    <script src="/assets/app.js?v=2"></script>
+  </body>
+</html>

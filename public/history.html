@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>History • kindlink</title>
+    <link rel="stylesheet" href="/assets/app.css?v=2" />
+  </head>
+  <body data-page="history">
+    <header class="topbar">
+      <div class="container">
+        <a class="brand" href="/index.html"><span class="logo"></span> kindlink</a>
+        <nav class="nav" data-nav></nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="grid">
+        <div class="card col-12">
+          <div class="card-body">
+            <div class="pill">Completed tasks history</div>
+            <h1 style="margin-top:10px">History</h1>
+            <p>Completed tasks improve trust and tracking.</p>
+            <table class="table" style="margin-top:14px">
+              <thead><tr><th>Status</th><th>Completed</th><th></th></tr></thead>
+              <tbody id="historyTbody"></tbody>
+            </table>
+            <div class="actions">
+              <a class="btn" href="/dashboard.html">Dashboard</a>
+              <a class="btn primary" href="/browse-requests.html">Browse</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <footer class="footer">kindlink • built for community trust</footer>
+    <script src="/assets/app.js?v=2"></script>
+  </body>
+</html>

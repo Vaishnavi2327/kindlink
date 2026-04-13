@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Feedback • kindlink</title>
+    <link rel="stylesheet" href="/assets/app.css?v=2" />
+  </head>
+  <body data-page="feedback">
+    <header class="topbar">
+      <div class="container">
+        <a class="brand" href="/index.html"><span class="logo"></span> kindlink</a>
+        <nav class="nav" data-nav></nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="grid">
+        <div class="card col-7">
+          <div class="card-body">
+            <h1>Submit feedback</h1>
+            <p>Both requester and helper can rate completed tasks (1–5). Each person can submit once per task.</p>
+            <form id="feedbackForm">
+              <label for="taskId">Task ID</label>
+              <input id="taskId" required placeholder="Paste taskId here" />
+              <div class="row">
+                <div>
+                  <label for="rating">Rating</label>
+                  <select id="rating">
+                    <option value="5">5 - Excellent</option>
+                    <option value="4">4 - Good</option>
+                    <option value="3">3 - OK</option>
+                    <option value="2">2 - Poor</option>
+                    <option value="1">1 - Bad</option>
+                  </select>
+                </div>
+                <div>
+                  <label>&nbsp;</label>
+                  <button class="btn" type="button" id="loadExisting">Load existing</button>
+                </div>
+              </div>
+              <label for="comment">Comment</label>
+              <textarea id="comment" placeholder="Optional comment…"></textarea>
+              <div class="actions">
+                <button class="btn primary" type="submit">Submit</button>
+                <a class="btn" href="/history.html">Back</a>
+              </div>
+            </form>
+            <div id="feedbackListBox" style="margin-top:14px"></div>
+          </div>
+        </div>
+        <div class="card col-5">
+          <div class="card-body">
+            <h2>Tip</h2>
+            <p>Open a task from <b>History</b> and use the Feedback button to auto-fill taskId.</p>
+            <div class="actions">
+              <a class="btn" href="/history.html">History</a>
+              <a class="btn" href="/my-tasks.html">My tasks</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <footer class="footer">kindlink • built for community trust</footer>
+    <script src="/assets/app.js?v=2"></script>
+  </body>
+</html>
