@@ -4,7 +4,6 @@ const { getDb } = require('../db/mongo');
 const { requireAuth } = require('../middleware/auth');
 
 const router = express.Router();
-
 router.get('/', requireAuth, async (req, res) => {
   const db = getDb();
   const userId = String(req.user.userId);
