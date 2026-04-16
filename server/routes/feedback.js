@@ -11,7 +11,6 @@ router.post('/', requireAuth, async (req, res) => {
   if (!taskId || !Number.isFinite(rNum) || rNum < 1 || rNum > 5) {
     return res.status(400).json({ error: 'Invalid fields' });
   }
-
   const db = getDb();
   const task = await db.collection('tasks').findOne({ _id: new ObjectId(taskId) });
   if (!task) return res.status(404).json({ error: 'Task not found' });
