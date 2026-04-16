@@ -6,7 +6,6 @@ const { requireAuth } = require('../middleware/auth');
 const router = express.Router();
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
-
 async function ensureTaskAccess(db, taskId, userId) {
   let task;
   try {
