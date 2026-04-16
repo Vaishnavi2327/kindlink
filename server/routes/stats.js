@@ -6,7 +6,6 @@
 const express = require('express');
 const { getDb } = require('../db/mongo');
 const router = express.Router();
-
 // Public impact counters
 router.get('/', async (_req, res) => {
   try {
