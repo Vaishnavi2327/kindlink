@@ -13,6 +13,7 @@ function safeUser(u) {
   return { ...rest, _id: String(u._id) };
 }
 
+
 function sha256Hex(input) {
   return crypto.createHash('sha256').update(String(input)).digest('hex');
 }
